@@ -1,0 +1,101 @@
+* { 
+    user-select: none; 
+    -ms-user-select: none; 
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    font-family: Candara;
+}
+body { 
+    margin: 0; 
+    padding: 0;
+    overflow: hidden;
+}
+
+.playScreen {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    margin-top: -200px;
+    height: 400px;
+    margin-left: -300px;
+    border: 2px solid #000;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px #000;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+#btnMineField {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    font-size: 130px;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    box-shadow: 0px 0px 5px #000;
+    background: #181818;
+    color: #808080;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+#btnMineField:hover {
+    text-shadow: 0px 0px 10px #000;
+    color: #fff;
+    background-color: #ff3232;
+}
+
+.options {
+    display: inline-block;
+    width: 45%;
+    margin-top: 10px;
+    text-align: center;
+}
+.options label {
+    width: 100%;
+    font-size: 40px;
+}
+.options input { 
+    font-size: 40px;
+    width: 100px;
+    text-align: center;
+}
+
+.mineCamp {
+    box-sizing: border-box;
+    padding: 2px;
+    margin: 0 auto;
+    height: auto;
+    min-width: 600px;
+    min-height: 600px;
+}
+.mineCamp div {
+    text-align: center;
+}
+
+.field {
+    box-sizing: border-box;
+    border: 1px solid #000;
+    background: linear-gradient(#ddd, #808080);
+    cursor: pointer;
+    font-weight: bold;
+    font-family: Consolas;
+}
+.field:hover { background: linear-gradient(#ddd, #000); }
+.field::after { font-size: 20px; content: '0'; color: transparent; }
+.field:disabled { cursor: auto; background: linear-gradient(#ddd, #fff); }
+.field.mine { background: linear-gradient(#ddd, red); }
+.field.mineFound { background: linear-gradient(#ddd, gold); }
+.field.doubts::after { content: '?'; color: #000; }
+.field[class*=has] { color: #000; }
+.field.has1::after { content: '1'; text-shadow: 0 0 3px blue; }
+.field.has2::after { content: '2'; text-shadow: 0 0 3px green; }
+.field.has3::after { content: '3'; text-shadow: 0 0 3px darkgoldenrod; }
+.field.has4::after { content: '4'; text-shadow: 0 0 3px red; }
+.field.has5::after { content: '5'; text-shadow: 0 0 3px orange; }
+.field.has6::after { content: '6'; text-shadow: 0 0 3px purple; }
+.field.has7::after { content: '7'; text-shadow: 0 0 3px chocolate; }
+.field.has8::after { content: '8'; text-shadow: 0 0 3px magenta; }
